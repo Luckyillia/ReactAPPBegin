@@ -7,19 +7,44 @@ import Hello2 from './components/Hello2';
 import Button from './components/Button';
 import Button2 from './components/Button2';
 
+import Product from './components/Product'
+
+const product = { 
+  name: "Laptop", 
+  price: 3500, 
+  description: "Wydajny laptop do pracy i nauki" 
+}; 
+
 function App() {
   return (
     <div className="App">
-      <Hello/>
-      <Hello2/>
-      <div className="gap-4 flex">
-        <Button name="btn1" label="Click me" bgColor="success"/> 
-        <Button name="btn1" label="Click me" bgColor="danger"/>
-        <Button2 name="btn1" label="Click me" bgColor="info"/>
-        <Button2 name="btn1" label="Click me" bgColor="warning"/>
+      <div className="container text-center">
+        <div className="row justify-content-center">
+          <Hello/>
+          <Hello2/>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-sm d-flex justify-content-center">
+            <Button name="btn1" label="Click me" bgColor="success"/> 
+          </div>
+          <div className="col-sm d-flex justify-content-center">
+            <Button name="btn1" label="Click me" bgColor="danger"/>
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-sm d-flex justify-content-center">
+            <Button2 name="btn1" label="Click me" bgColor="info"/>
+          </div>
+          <div className="col-sm d-flex justify-content-center">
+            <Button2 name="btn1" label="Click me" bgColor="warning"/>
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-sm mx-auto">
+            <Product name={product.name} price={product.price} description={product.description} />
+          </div>
+        </div>
       </div>
-      
-
     </div>
   );
 }

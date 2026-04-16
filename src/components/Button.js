@@ -1,10 +1,6 @@
 //przykład przekazywania wielu props’ów 
 import React from 'react'; 
-import { Component } from 'react'; 
 class Button extends React.Component { 
-    constructor(props) { 
-        super(props); 
-    } 
     handleClick () { 
         alert('btn was clicked!'); 
     } 
