@@ -8,6 +8,9 @@ import Button from './components/Button';
 import Button2 from './components/Button2';
 
 import Product from './components/Product'
+import Counter from './components/Counter'
+import Counter2 from './components/Counter2'
+import TodoApp from './components/TodoApp'
 
 const product = { 
   name: "Laptop", 
@@ -41,7 +44,20 @@ function App() {
         </div>
         <div className="row justify-content-center">
           <div className="col-sm mx-auto">
-            <Product name={product.name} price={product.price} description={product.description} />
+            <Product name={product.name} price={product.price} description={product.description} srcImg="https://th.bing.com/th/id/OIP.TABlGYoUA-adhs4_vvSAsAHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" />
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-sm mx-auto">
+            <Counter />
+          </div>
+          <div className="col-sm mx-auto">
+            <Counter2 />
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-sm mx-auto">
+            <TodoApp />
           </div>
         </div>
       </div>
