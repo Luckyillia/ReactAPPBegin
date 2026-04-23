@@ -1,5 +1,6 @@
 import './App.css';
 import './css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-routerdom"; 
 
 import Hello from './components/Hello';
 import Hello2 from './components/Hello2';
@@ -12,6 +13,8 @@ import Counter from './components/Counter'
 import Counter2 from './components/Counter2'
 import TodoApp from './components/TodoApp'
 
+import Header from './components/Header';
+
 const product = { 
   name: "Laptop", 
   price: 3500, 
@@ -21,6 +24,15 @@ const product = {
 function App() {
   return (
     <div className="App">
+      <Router> 
+        <Header /> 
+        <section className="content"> 
+          <Routes> 
+            <Route path="/" element={<Home />} /> 
+            <Route path="about" element={<About />} /> 
+          </Routes> 
+        </section> 
+      </Router>
       <div className="container text-center">
         <div className="row justify-content-center">
           <Hello/>
