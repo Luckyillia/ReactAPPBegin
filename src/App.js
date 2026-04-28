@@ -1,5 +1,6 @@
 import './App.css';
-import './css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Hello from './components/Hello';
